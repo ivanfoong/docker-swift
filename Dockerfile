@@ -7,4 +7,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 		libicu52 \
 	&& rm -rf /var/lib/apt/lists/*
 
+ADD samples/hello /root/hello
+WORKDIR /root
+
 CMD ["bash"]
